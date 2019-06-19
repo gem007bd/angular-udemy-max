@@ -1,6 +1,14 @@
-<div style="text-align:center">
-  <h1>{{ title }}</h1>
+<div class='container'>
+  <div class="row">
+    <h3>I am app component</h3>
+    <app-servers></app-servers>
+  </div>
+  <div class="row">
+    <app-warning></app-warning>
+  </div>
+  <hr/>
+  <div class="row">
+    <app-header></app-header>
+  </div>
 </div>
-<input type="text" [(ngModel)]='name'>
-<div>{{ name }}</div>
 <router-outlet></router-outlet>
