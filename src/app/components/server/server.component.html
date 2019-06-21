@@ -1,3 +1,37 @@
-<p>
-  server works!
+<!-- <div class="row">
+  <label>User Name</label>
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="username"
+  >
+  <p>The updated username is {{username}}</p>
+</div>
+<div class="row">
+  <button
+    class="btn btn-primary"
+    [disabled]="username ===''"
+    (click)="onResetUserName()"
+    >Reset User</button>
+</div> -->
+<label for="Server">Server Name</label>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName"
+>
+<p *ngIf="serverCreated; else noServer" class="mt-lg-5">
+  Server was created, server name is {{serverName}}
 </p>
+<ng-template #noServer>
+  <p>No server was created!</p>
+</ng-template>
+<div class="row mt-5">
+  <div class="col-xs-12 ">
+      <button
+        class="btn btn-primary"
+        (click)="onCreateServer()"
+        [disabled]="!allowNewServer"
+      >Create Server</button>
+  </div>
+</div>
