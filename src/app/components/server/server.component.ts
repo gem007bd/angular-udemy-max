@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './server.component.html',
   styleUrls: ['./server.component.css']
 })
+
 export class ServerComponent implements OnInit {
 serverId = 10;
 serverCreateStatus = 'No server was created';
@@ -12,19 +13,21 @@ allowNewServer = false;
 serverName = 'test server';
 username = '';
 serverCreated = false;
+serverStatus = 'offline';
+
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
     }, 2000);
+
+    this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   onCreateServer() {
     this.serverCreated = true;
-    this.serverCreateStatus = 'Server was created! Name is  ' + this.serverName;
+    this.serverCreateStatus = 'Server was created! Name is  ' + this.serverName + ' ' + this.serverStatus;
   }
 
   onUpdateServerName(event: Event) {
@@ -32,5 +35,13 @@ serverCreated = false;
   }
   onResetUserName() {
     this.username = null;
+  }
+
+  getServerStatus() {
+    return this.serverStatus;
+  }
+
+  getColor() {
+    return this.serverStatus === 'online' ? 'green' : 'red';
   }
 }
