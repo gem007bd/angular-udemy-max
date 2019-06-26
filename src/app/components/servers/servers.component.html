@@ -1,3 +1,21 @@
-<p>
-  servers works!
+<div class="row col-xs-12">
+  <button
+    class='btn btn-primary'
+    (click)="onDetailClicked()"
+    >
+  Display Details</button>
+</div>
+<p *ngIf="secrectPassword">
+  Sectret password = tuna
+</p>
+<hr/>
+<div class="row col-xs-12">
+  <p>Click count: {{ clickCount }}</p>
+</div>
+<p
+    *ngFor="let logItem of log; let i = index"
+    [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text': i >= 5}"
+    >
+    Logger data: {{ logItem }}
 </p>
