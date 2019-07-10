@@ -1,7 +1,7 @@
 <form>
   <div class="form-row">
     <div class="form-group col-md-9">
-      <label for="inputEmail4">Name</label>
+      <label for="name">Name</label>
       <input
         type="text"
         class="form-control"
@@ -11,7 +11,7 @@
         >
     </div>
     <div class="form-group col-md-3">
-      <label for="inputPassword4">Amount</label>
+      <label for="amount">Amount</label>
       <input
         type="text"
         class="form-control"
@@ -29,7 +29,7 @@
       </label>
     </div>
   </div>
-  <button type="submit" class="btn btn-success mr-2">Add</button>
+  <button type="submit" class="btn btn-success mr-2" (click)="onAddItem()">Add</button>
   <button type="submit" class="btn btn-danger mr-2">Delete</button>
   <button type="submit" class="btn btn-info">Clear</button>
 </form>
