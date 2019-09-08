@@ -1,13 +1,12 @@
-
 <div class="card mb-3">
-   <a
-    href="#"
-    class="btn btn-fix text-left"
-    (click)='onSelected()'
-    >
+  <a
+    class="btn btn-fix text-left cursor-pointer"
+    [routerLink]="[recipe.id]"
+    routerLinkActive="active"
+  >
     <div class="row no-gutters">
       <div class="col-md-4">
-        <img [src]="recipe.imagePath" class="card-img" alt="...">
+        <img [src]="recipe.imagePath" class="card-img" alt="..." />
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -16,7 +15,5 @@
         </div>
       </div>
     </div>
-   </a>
+  </a>
 </div>
-
-
