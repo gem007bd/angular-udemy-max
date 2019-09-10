@@ -15,10 +15,11 @@ const appRoutes: Routes = [
       { path: "", component: RecipeStartComponent },
       { path: "new", component: RecipeEditComponent },
       { path: ":id", component: RecipesDetailComponent },
-      { path: "edit/:id", component: RecipeEditComponent }
+      { path: ":id/edit", component: RecipeEditComponent }
     ]
   },
-  { path: "shopping-list", component: ShoppingListComponent }
+  { path: "shopping-list", component: ShoppingListComponent },
+  { path: "**", component: RecipesComponent}
 ];
 
 @NgModule({
