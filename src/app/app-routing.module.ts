@@ -7,7 +7,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { RecipeEditComponent } from "./components/recipes/recipe-edit/recipe-edit.component";
 
 const appRoutes: Routes = [
-  { path: "", component: RecipesComponent, pathMatch: "full" },
+  { path: "", redirectTo: 'recipe', pathMatch: "full" },
   {
     path: "recipe",
     component: RecipesComponent,
