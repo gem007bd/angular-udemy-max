@@ -1,25 +1,52 @@
-<div *ngIf="editModde">Edit Mode</div>
-<form>
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input
-      type="text"
-      class="form-control"
-      id="InputName"
-      placeholder="Enter Name"
-    />
-  </div>
-  <div class="form-group">
-    <label for="description">Description</label>
-    <input
-      type="text"
-      class="form-control"
-      id="InputDescription"
-      placeholder="Description"
-    />
-  </div>
-  <div class="form-group">
-    <input type="file" class="form-control-file" id="exampleFormControlFile1" />
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
+<div class="col-xs-12" *ngIf="editModde">Edit Mode</div>
+    <form>
+      <div class="row">
+        <div class="col">
+          <button type="submit" class='btn btn-success mr-2'>Save</button>
+          <button type="button" class='btn btn-secondary'>Cancel</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for='name'>Name</label>
+            <input type="text"
+              name="name"
+              id="name"
+              class='form-control'>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for='imagePath'>Image</label>
+            <input type="text" name="imagePath" id="imagePath" class='form-control'>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+            <img src="" alt="" class='img-responsive'>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for='description'>Description</label>
+            <textarea
+              name="description"
+              id="description"
+              class='form-control'
+              rows='6'>
+             </textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row aligin-item-start">
+          <div class="col-sm-7"><input type="text" name="" id="" class='form-control'></div>
+          <div class="col-sm-3"><input type="number" name="" id="" class='form-control'></div>
+          <div class="col-sm-2"><button class='btn btn-danger'>X</button></div>
+      </div>
+    </form>
