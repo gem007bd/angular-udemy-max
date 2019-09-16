@@ -1,21 +1,31 @@
+import { Ingredient } from './../../shared/ingredient.model';
 import { Injectable} from "@angular/core";
 import { Recipe } from "./recipe.model";
 
 @Injectable()
 export class RecipeService {
 
+
   private recipes: Recipe[] = [
     new Recipe(
       1,
       "A test",
       "simple description",
-      "http://sydneytimetocater.com.au/wp-content/uploads/2018/11/Meat-lamb-skewers.jpg"
+      "http://sydneytimetocater.com.au/wp-content/uploads/2018/11/Meat-lamb-skewers.jpg",
+      [
+        new Ingredient('Meat', 1),
+        new Ingredient('Franch Fries', 20)
+      ]
     ),
     new Recipe(
       2,
       "A test 2",
       "simple description 2",
-      "https://www.wallpaperup.com/uploads/wallpapers/2018/02/01/1199262/2c93886f34089d850ab0c838571d048b.jpg"
+      "https://www.wallpaperup.com/uploads/wallpapers/2018/02/01/1199262/2c93886f34089d850ab0c838571d048b.jpg",
+      [
+        new Ingredient('Meat', 1),
+        new Ingredient('Franch Fries', 20)
+      ]
     )
   ];
 
