@@ -6,9 +6,17 @@
     Manage Recipe
   </a>
   <div class="dropdown-menu" appDropdown aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Add</a>
-    <a class="dropdown-item cursor-pointer" (click)="onEdit()">Edit</a>
-    <a class="dropdown-item" href="#">Delete</a>
+    <a
+      class="dropdown-item cursor-pointer"
+      (click)="onNewRecipe()"
+      >Add</a>
+    <a
+      class="dropdown-item cursor-pointer"
+      (click)="onEdit()"
+      >Edit</a>
+    <a
+      class="dropdown-item"
+      (click)="onDelete()">Delete</a>
   </div>
 </div>
 <p>{{recipe.description}}</p>
